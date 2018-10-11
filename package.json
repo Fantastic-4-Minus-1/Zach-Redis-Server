@@ -1,0 +1,45 @@
+{
+  "name": "stock_fluctuation",
+  "version": "1.0.0",
+  "description": "Stock fluctuation component for robin-hackers app",
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "seed": "seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinHackers/stock_fluctuation.git"
+  },
+  "keywords": [],
+  "author": "Charles Anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinHackers/stock_fluctuation/issues"
+  },
+  "homepage": "https://github.com/RobinHackers/stock_fluctuation/blob/master/README.md",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "pg-promise": "^8.4.6",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
