@@ -8,7 +8,7 @@ module.exports = {
   fetchCompany: (req, res) => {
     axios.get(`http://ec2-18-218-247-23.us-east-2.compute.amazonaws.com/api/graph/${path.basename(req.url)}/`)
       .then(data => {
-        client.setex(path.basename(req.url), 30, JSON.stringify(data.data));
+        client.setex(path.basename(req.url), 4, JSON.stringify(data.data));
         res.send(data.data);
       })
       .catch(err => {
