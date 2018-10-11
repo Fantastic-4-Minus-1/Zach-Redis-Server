@@ -21,6 +21,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(logger('dev'));
 
+app.use('/loaderio-2843bb13791f8f79f47a43c547f3857b/', (req, res) => {
+  res.send('loaderio-2843bb13791f8f79f47a43c547f3857b')
+})
+
 app.use('/:company', express.static('public'));
 
 app.use('/graph', cache, routes);
