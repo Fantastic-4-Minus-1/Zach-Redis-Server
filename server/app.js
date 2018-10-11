@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const { cache } = require('./redis');
 
@@ -26,6 +27,8 @@ app.use('/graph', cache, routes);
 
 app.use('/api/graph', cache, routes);
 
-module.exports = {
-  app,
-};
+const PORT = 3006;
+
+app.listen(PORT, err =>
+  console.log(err || `Now listening on port ${PORT}  🤓 👨🏽‍💻`)
+);
